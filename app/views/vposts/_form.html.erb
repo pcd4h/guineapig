@@ -1,0 +1,25 @@
+<%= form_for(@vpost) do |f| %>
+  <% if @vpost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vpost.errors.count, "error") %> prohibited this vpost from being saved:</h2>
+
+      <ul>
+      <% @vpost.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :identifier %><br>
+    <%= f.text_field :identifier %>
+  </div>
+  <div class="field">
+    <%= f.label :payload %><br>
+    <%= f.text_area :payload %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

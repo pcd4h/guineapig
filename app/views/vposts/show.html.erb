@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @vpost.identifier %>
+</p>
+
+<p>
+  <strong>Payload:</strong>
+  <%= @vpost.payload %>
+</p>
+
+<%= link_to 'Edit', edit_vpost_path(@vpost) %> |
+<%= link_to 'Back', vposts_path %>

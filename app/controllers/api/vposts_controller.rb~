@@ -1,0 +1,10 @@
+module Api
+  class VpostsController < ApplicationController
+    respond_to :json
+
+    def index
+      @vposts = Vpost.all
+      respond_with @vposts
+    end
+  end
+end

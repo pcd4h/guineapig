@@ -1,0 +1,29 @@
+<h1>Listing vposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>Payload</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vposts.each do |vpost| %>
+      <tr>
+        <td><%= vpost.identifier %></td>
+        <td><%= vpost.payload %></td>
+        <td><%= link_to 'Show', vpost %></td>
+        <td><%= link_to 'Edit', edit_vpost_path(vpost) %></td>
+        <td><%= link_to 'Destroy', vpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vpost', new_vpost_path %>
